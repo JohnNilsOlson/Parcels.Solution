@@ -1,13 +1,14 @@
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Parcels.Models
 {
   public class Parcel
   {
-    public int Length { get; set; }
-    public int Width { get; set; }
-    public int Height { get; set;}
-    public int Weight { get; set; }
+    [Required] public int Length { get; set; }
+    [Required] public int Width { get; set; }
+    [Required] public int Height { get; set; }
+    [Required] public int Weight { get; set; }
 
     private static List<Parcel> _instances = new List<Parcel> {};
 

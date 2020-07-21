@@ -5,9 +5,11 @@
 {
   <p>There are no items in the list.</p>
 }
-  @foreach (Parcel newParcel in Model)
-  { <ul>
-      <li>Parcel Volume: @newParcel.Volume()</li>
-      <li>Parcel Estimated Cost: @newParcel.CostToShip()</li>
-    </ul>
-  }
+@foreach (Parcel newParcel in Model)
+{ <ul>
+    <li>Parcel Volume: @newParcel.Volume() Cubic Ft</li>
+    <li>Parcel Weight: @newParcel.Weight Lbs</li>
+    <li>Parcel Estimated Cost: $@newParcel.CostToShip().00</li>
+  </ul>
+}
+  
