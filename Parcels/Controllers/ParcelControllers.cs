@@ -8,7 +8,7 @@ namespace Parcels.Controllers
     [HttpGet("/parcels/new")]
     public ActionResult ParcelForm()
     {
-    return View();
+      return View();
     }
 
     [HttpPost("/parcelinfo")]
