@@ -15,8 +15,16 @@ namespace Parcels.Controllers
     [HttpPost("/parcelinfo")]
     public ActionResult ParcelInfo(int length, int width, int height, int weight)
     {
-      Parcel newParcel = new Parcel(length, width, height, weight);
-      return View(newParcel);
+      if (ModelState.IsValid)
+      {
+        Parcel newParcel = new Parcel(length, width, height, weight);
+        return View(newParcel);
+      }
+      else
+      {
+        string error = "Please fill out all fields.";
+        return View(error);
+      }
     }
 
     [HttpGet("/index")]
