@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+  </head>
+  <body>
+    <form action="/parcelinfo">
+      <div class="form-group">
+        <label for="length">Enter the package length in inches:</label>
+        <input id="length" name="length" type="number" class="form-control" min="1">
+      </div>
+      <div class="form-group">
+        <label for="width">Enter the package width in inches:</label>
+        <input id="width" name="width" type="number" class="form-control" min="1">
+      </div>
+      <div class="form-group">
+        <label for="height">Enter the package height in inches:</label>
+        <input id="height" name="height" type="number" class="form-control" min="1">
+      </div>
+      <div class="form-group">
+        <label for="weight">Enter the package weight in pounds:</label>
+        <input id="weight" name="weight" type="number" class="form-control" min="1">
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </body>
+</html>
