@@ -22,8 +22,7 @@ namespace Parcels.Controllers
       }
       else
       {
-        string error = "Please fill out all fields.";
-        return View(error);
+        return RedirectToAction("ParcelForm");
       }
     }
 
