@@ -14,12 +14,14 @@ namespace Parcels.Controllers
     [HttpPost("/parcelinfo")]
     public ActionResult ParcelInfo(int length, int width, int height, int weight)
     {
-      Parcel newParcel = new Parcel();
-        newParcel.Length = length;
-        newParcel.Width = width;
-        newParcel.Height = height;
-        newParcel.Weight = weight;
-        return View(newParcel);
+      Parcel newParcel = new Parcel(length, width, height, weight);
+      return View(newParcel);
+    }
+
+    [HttpGet("/index")]
+    public ActionResult Index()
+    {
+      return View();
     }
   }
 }
