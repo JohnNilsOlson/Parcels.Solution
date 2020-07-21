@@ -7,7 +7,7 @@
 }
   @foreach (Parcel newParcel in Model)
   { <ul>
-      <li>@newParcel.Volume()</li>
-      <li>@newParcel.CostToShip()</li>
+      <li>Parcel Volume: @newParcel.Volume()</li>
+      <li>Parcel Estimated Cost: @newParcel.CostToShip()</li>
     </ul>
   }

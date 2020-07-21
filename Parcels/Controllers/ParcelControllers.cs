@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Parcels.Models;
+using System.Collections.Generic;
 
 namespace Parcels.Controllers
 {
@@ -21,7 +22,8 @@ namespace Parcels.Controllers
     [HttpGet("/index")]
     public ActionResult Index()
     {
-      return View();
+      List<Parcel> allParcels = Parcel.GetAll();
+      return View(allParcels);
     }
   }
 }

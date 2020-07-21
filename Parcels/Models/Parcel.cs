@@ -20,6 +20,11 @@ namespace Parcels.Models
 
       _instances.Add(this);
     }
+
+    public static List<Parcel> GetAll()
+    {
+      return _instances;
+    }
     public int Volume()
     {
       return (Length * Width * Height);
