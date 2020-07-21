@@ -1,4 +1,4 @@
-namespace Parcels.ModelsModel
+namespace Parcels.Models
 {
   public class Parcel
   {
